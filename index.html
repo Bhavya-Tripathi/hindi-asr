@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hindi ASR on RPi3</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap" rel="stylesheet">
+     <!-- Bootstrap -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+     crossorigin="anonymous"
+   />
+   <!-- custom stylesheet -->
+   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+    <h1>Porting Hindi ASR onto Raspberry Pi 3</h1>
+    <h6>Academic Project for 6th Semester</h6>
+    <video  width= "50%" controls> <source src="media/video_2021-05-29_23-31-42.mp4" type="video/mp4"> </video>
+    <p>Automatic speech recognition (ASR) systems use models which work at two stages, namely the parameterization of the input noise signal followed by training and testing of the features using any classification technique. Researchers have proposed a variety of acoustic models to accomplish this complex task. Deep learning is currently one of the most reliable and technologically capable approaches for creating more accurate speech recognition models and natural language processing (NLP). For low-resource languages, automatic speech recognition (ASR) systems have recently gained popularity. India has 22 official languages and over 2,000 regional languages, the majority of which have limited resources. The Hindi language's standard resources are also minimal. In our project, a Time Delay Neural Network (TDNN) was used to implement a continuous Hindi ASR system, which significantly improves the performance of Gaussian Mixture Model-Hidden Markov Model (GMM-HMM) based Hindi ASR system using the <span><a href="https://kaldi-asr.org/">Kaldi</a></span> automatic speech recognition toolkit.
+        Our project has utilised this system by deploying it on a raspberry pi using <span><a href="https://github.com/alphacep/vosk-api">Vosk</a></span>, an offline speech recognition toolkit, to create a portable device that can detect, receive and process voice audio data in real time.
+        </p>
+    <h3>Hardware and Software</h3>
+    <ul>
+        <li>Raspberry Pi 3</li>
+        <li> <a href="https://wiki.seeedstudio.com/ReSpeaker_4_Mic_Array_for_Raspberry_Pi/"> ReSpeaker 4-mic Array</a></li>
+        <li>Python3</li>
+        <li>Kaldi trained TDNN model (Hindi ASR)</li>
+        <li>Vosk-API</li>
+    </ul>
+    <h3>My Contribution</h3>
+    <p>Training and testing the GMM-HMM and TDNN models using Kaldi speech recognition toolkit and Vosk API</p>
+    <h3>Final Result</h3>
+    <p>After compiling the model with kaldi, the training word error rate was found to be 45%. By executing the code with different input samples, we found the word error rate for test 
+        data to be in between 0 - 64%., with an average of 23% .This is accounting for the 
+        variations in test data and training data, such as variations in dialect, accent, vocabulary 
+        and enunciation.    </p>
+</div>
+<footer>Copyright Bhavya Tripathi 2021</footer>
+</body>
+</html>
